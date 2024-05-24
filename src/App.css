@@ -1,0 +1,139 @@
+.formContainer
+{
+  height: 100vh;
+}
+input
+{
+  width: 300px;
+  outline: none;
+}
+
+.home
+{
+  height: 100vh;
+}
+.Container
+{
+  width: 70%;
+  height: 80%;
+}
+.sidebar
+{
+  flex: 1;
+  background-color: #41404e;
+  /* position: relative; */
+}
+.navbar
+{
+  height: 60px;
+}
+::placeholder
+{
+  color: rgb(192, 191, 191);
+}
+.userChat
+{
+  cursor: pointer;
+  height: 70px;
+}
+.userChat:hover
+{
+  background-color: #2f2d52;
+}
+.chatInfo
+{
+  height: 60px;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.messages
+{
+  background-color: #b1b1c5;
+  height: calc(100% - 110px);
+  overflow: scroll;
+}
+.message
+{
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.input
+{
+  height: 55px;
+  justify-content: space-between;
+}
+
+@media (max-width: 480px)
+{
+
+}
+
+@media (max-width: 768px)
+{
+  .navbar .logo
+  {
+    display: none;
+  }
+  .home .Container
+  {
+    width: 90%;
+  }
+  
+}
+
+@media (max-width: 1200px)
+{
+  .navbar .logo
+  {
+    display: none;
+  }
+  .home .Container
+  {
+    width: 90%;
+  }
+}
+
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+} */
+
+/* .logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+} */
+
+/* @keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */

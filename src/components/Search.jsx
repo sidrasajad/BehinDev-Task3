@@ -1,9 +1,6 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { collection, query, where, getDocs, setDoc, updateDoc, serverTimestamp, getDoc, doc } from "firebase/firestore";
 import {db} from "../firebase"
-// import { async } from '@firebase/util';
-import { useContext } from 'react';
 import { AuthContext } from '../context/AuthContext';
 
 function Search() {
@@ -53,7 +50,10 @@ function Search() {
       if(!res.exists())
       {
         //create a chat in chat collection
-        await setDoc(doc(db, "chats", combinedId),{ messages: [] });
+        await setDoc(doc(db, "chats", combinedId),
+        { 
+          messages: [] 
+        });
 
         //create user chats
         await updateDoc(doc(db, "userChats", currentUser.uid),{
@@ -88,10 +88,12 @@ function Search() {
     <div className="search  border-bottom border-secondary ">
       <div className="searchForm p-2">
         <input type="text" name="" id="" placeholder='Search' 
-        onKeyDown={handleKey} 
-        onChange={(e) => setUsername(e.target.value)} 
-        value = {username}
-        className='bg-transparent border-0 text-white outline-none'/>
+          onKeyDown={handleKey} 
+          // oninput={handleSearch()}
+          onChange={(e) => setUsername(e.target.value)} 
+          value = {username}
+          className='bg-transparent border-0 text-white outline-none'
+        />
       </div>
       {err && <span>User not founs!</span>}
       {user && <div  onClick={handleSelect} className="userChat p-2 d-flex align-items-center gap-2 text-white">

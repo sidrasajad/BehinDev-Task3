@@ -1,6 +1,5 @@
 import { arrayUnion, updateDoc, doc, Timestamp, serverTimestamp } from 'firebase/firestore';
-import React, { useContext } from 'react'
-import { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { AuthContext } from '../context/AuthContext';
 import { ChatContext } from '../context/ChatContext';
 import Attach from "../img/attach.png"
@@ -23,8 +22,9 @@ function Input() {
       const uploadTask = uploadBytesResumable(storageRef, img);
 
       uploadTask.on(
-        // 'state_changed',
-        // null,
+        'state_changed',
+        null,
+
         (error) => {
           // setErr((error.message);
           // setErr(true);
@@ -77,15 +77,16 @@ function Input() {
   return (
     <div className='input bg-white p-2 d-flex align-items-center'>
       <input 
-      type="text" 
-      placeholder='Type something...' 
-      onChange={e => setText(e.target.value)} 
-      className='fs-5 border-0 w-75'
-      value={text}
+        type="text" 
+        placeholder='Type something...' 
+        onChange={e => setText(e.target.value)} 
+        className='fs-5 border-0 w-75'
+        value={text}
       />
       <div className="send d-flex align-items-center gap-1" style={{cursor: "pointer"}}>
         <img src={Attach} alt="" width={"20px"} height={"20px"}/>
-        <input type="file" id="file" className='fs-5 border-0 w-75' style={{display: "none"}} onChange={e=>setImg(e.target.files[0])} />
+        <input type="file" id="file" className='fs-5 border-0 w-75' style={{display: "none"}} 
+          onChange={e=>setImg(e.target.files[0])} />
         <label htmlFor="file">
           <img src={Image} alt="" width={"30px"} height={"30px"}/>
         </label>

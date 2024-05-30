@@ -1,7 +1,6 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { signOut } from 'firebase/auth'
 import { auth } from '../firebase'
-import { useContext } from 'react'
 import { AuthContext } from '../context/AuthContext'
 // import Profile from './Profile'
 
@@ -16,7 +15,7 @@ function Navbar() {
         <img src={currentUser.photoURL} alt="Profile Picture" className='rounded-5 object-fit-cover' width='24px' height='24px'/>
         <span>{currentUser.displayName}</span>
         {/* <Profile /> */}
-        <button onClick={()=>signOut(auth)} className='bg-secondary text-white border-0 rounded-1 p-1 px-2'>LogOut</button>
+        <button onClick={() => signOut(auth)} className='bg-secondary text-white border-0 rounded-1 p-1 px-2'>LogOut</button>
       </div>
     </div>
   )

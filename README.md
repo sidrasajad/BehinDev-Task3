@@ -28,7 +28,7 @@ You can test with these users also
     userName: Zainab
     password: Zainab123
 
-# Key Features:
+## Key Features:
 🔐 User Authentication: 
 Secure registration and login using Firebase Authentication, ensuring data protection and user privacy.
 
@@ -44,7 +44,7 @@ Interactive and user-friendly interface powered by React.
 📱 Responsive Design: 
 The application is fully responsive, providing a smooth experience on desktops, tablets, and mobile devices.
 
-# Tech Stack:
+## Tech Stack:
 Front-end: React,
 Back-end: Firebase (Authentication, Firestore, Storage),
 Styling: Bootstrap

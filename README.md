@@ -1,4 +1,6 @@
-# Current Users
+# Messaging App
+
+## Current Users
 
 You can test with these users also
 
@@ -43,6 +45,6 @@ Interactive and user-friendly interface powered by React.
 The application is fully responsive, providing a smooth experience on desktops, tablets, and mobile devices.
 
 # Tech Stack:
-Front-end: React
-Back-end: Firebase (Authentication, Firestore, Storage)
+Front-end: React,
+Back-end: Firebase (Authentication, Firestore, Storage),
 Styling: Bootstrap
